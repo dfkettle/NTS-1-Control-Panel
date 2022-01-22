@@ -38,17 +38,17 @@
 #X obj 0 0 cnv 15 100 50 empty empty empty 20 12 0 14 -204800 -66577
 0;
 #X obj 7 8 nbx 3 19 0 127 0 1 cc-nn-s cc-23-r Reverb_Type 0 30 0 14
--257985 -1 -1 5 256;
+-257985 -1 -1 6 256;
 #X floatatom 211 255 5 0 0 0 - - -;
-#X obj 155 381 s reverb-type-r;
 #X obj 211 226 r cc-23-r;
+#X obj 155 381 s parm-23-r;
 #X connect 0 0 3 0;
 #X connect 0 1 2 0;
 #X connect 0 2 1 0;
 #X connect 2 0 4 0;
 #X connect 3 0 16 0;
 #X connect 4 0 6 0;
-#X connect 5 0 32 0;
+#X connect 5 0 33 0;
 #X connect 6 0 5 1;
 #X connect 7 0 15 0;
 #X connect 8 0 7 0;
@@ -76,5 +76,5 @@
 #X connect 28 0 20 0;
 #X connect 28 1 21 0;
 #X connect 31 0 4 1;
-#X connect 33 0 31 0;
+#X connect 32 0 31 0;
 #X coords 0 -1 1 1 100 50 2 0 0;

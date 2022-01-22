@@ -12,16 +12,16 @@
 0;
 #X obj 7 7 nbx 3 19 0 127 0 1 cc-nn-s cc-05-r Osc_Shape 0 30 0 14 -257985
 -1 -1 9 256;
-#X obj 162 341 s osc-shape-r;
 #X obj 219 179 r cc-05-r;
+#X obj 162 341 s parm-05-r;
 #X connect 0 0 3 0;
 #X connect 0 1 2 0;
 #X connect 0 2 1 0;
 #X connect 2 0 4 0;
 #X connect 3 0 5 0;
 #X connect 4 0 6 0;
-#X connect 5 0 10 0;
+#X connect 5 0 11 0;
 #X connect 6 0 5 1;
 #X connect 7 0 4 1;
-#X connect 11 0 7 0;
+#X connect 10 0 7 0;
 #X coords 0 -1 1 1 100 50 2 0 0;

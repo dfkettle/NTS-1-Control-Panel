@@ -32,19 +32,19 @@
 #X obj 185 177 r \$0-remap-out;
 #X obj 489 137 moses 101;
 #X floatatom 242 245 5 0 0 0 - - -;
-#X obj 185 368 s mod-type-r;
 #X obj 0 0 cnv 15 100 50 empty empty empty 20 12 0 14 -204800 -66577
 0;
 #X obj 7 7 nbx 3 19 0 127 0 1 cc-nn-s cc-01-r Mod_Type 0 30 0 14 -257985
 -1 -1 127 256;
 #X obj 242 216 r cc-01-r;
+#X obj 185 368 s parm-01-r;
 #X connect 0 0 3 0;
 #X connect 0 1 2 0;
 #X connect 0 2 1 0;
 #X connect 2 0 4 0;
 #X connect 3 0 21 0;
 #X connect 4 0 6 0;
-#X connect 5 0 27 0;
+#X connect 5 0 30 0;
 #X connect 6 0 5 1;
 #X connect 7 0 11 0;
 #X connect 7 1 8 0;
@@ -68,5 +68,5 @@
 #X connect 25 0 14 0;
 #X connect 25 1 15 0;
 #X connect 26 0 4 1;
-#X connect 30 0 26 0;
+#X connect 29 0 26 0;
 #X coords 0 -1 1 1 100 50 2 0 0;

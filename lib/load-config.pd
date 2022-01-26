@@ -1,0 +1,36 @@
+#N canvas 900 246 450 394 12;
+#X obj 143 57 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 143 168 openpanel;
+#X msg 143 201 read \$1;
+#X obj 143 347 qlist;
+#X obj 70 273 pipe 500;
+#X msg 70 299 bang;
+#X obj 70 249 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 143 26 r \$0-load-config-s;
+#X obj 143 113 pdcontrol;
+#X msg 143 85 dir;
+#X obj 10 10 cnv 15 30 30 empty empty empty 20 12 0 14 #dcdcdc #404040
+0;
+#X obj 10 10 bng 30 250 50 0 \$0-load-config-s \$0-load-config-r empty
+20 7 0 10 #00fc04 #000000 #000000;
+#X obj 143 139 makefilename %s/../config;
+#X obj 207 258 parse-file-path;
+#X obj 275 299 s config-name;
+#X obj 240 332 print;
+#X connect 0 0 9 0;
+#X connect 1 0 2 0;
+#X connect 1 0 13 0;
+#X connect 2 0 3 0;
+#X connect 2 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 6 0 4 0;
+#X connect 7 0 0 0;
+#X connect 8 0 12 0;
+#X connect 9 0 8 0;
+#X connect 12 0 1 0;
+#X connect 13 2 14 0;
+#X connect 13 2 15 0;
+#X coords 0 -1 1 1 30 30 2 10 10;

@@ -1,0 +1,46 @@
+#N canvas 615 107 591 268 12;
+#X obj 167 166 env~ 128;
+#X obj 167 189 - 100;
+#X obj 299 166 env~ 128;
+#X obj 299 189 - 100;
+#X obj 10 10 cnv 15 120 200 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X obj 56 41 vu 10 160 \$0-volume-left empty -1 -8 0 10 -262130 -1
+0 0;
+#X obj 76 41 vu 10 160 \$0-volume-right empty -1 -8 0 10 -262130 -1
+1 0;
+#X obj 22 70 vsl 15 128 0 1 0 0 \$0-volume-s \$0-volume-r empty 0 -9
+0 10 -257985 -1 -1 10600 0;
+#X obj 22 38 tgl 16 0 \$0-dsp-on-s \$0-dsp-on-r empty 17 7 0 10 -4034
+-1 -1 0 1;
+#X text 19 14 Monitor DSP;
+#X obj 443 20 r \$0-dsp-on-s;
+#X msg 443 59 \; pd dsp \$1;
+#X obj 167 217 s \$0-volume-left;
+#X obj 299 217 s \$0-volume-right;
+#X obj 167 20 adc~;
+#X obj 166 91 *~;
+#X obj 299 91 *~;
+#X obj 249 20 r \$0-volume-s;
+#X obj 222 132 dac~;
+#X obj 444 115 loadbang;
+#X obj 444 153 int 0;
+#X obj 444 191 s \$0-volume-r;
+#X obj 474 219 s \$0-dsp-on-r;
+#X connect 0 0 1 0;
+#X connect 1 0 12 0;
+#X connect 2 0 3 0;
+#X connect 3 0 13 0;
+#X connect 10 0 11 0;
+#X connect 14 0 15 0;
+#X connect 14 1 16 0;
+#X connect 15 0 0 0;
+#X connect 15 0 18 0;
+#X connect 16 0 2 0;
+#X connect 16 0 18 1;
+#X connect 17 0 15 1;
+#X connect 17 0 16 1;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 20 0 22 0;
+#X coords 0 -1 1 1 120 200 2 10 10;

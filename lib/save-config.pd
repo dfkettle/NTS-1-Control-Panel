@@ -1,0 +1,54 @@
+#N canvas 862 314 526 400 12;
+#X obj 80 74 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 80 99 t b b b;
+#X msg 126 128 clear;
+#X obj 80 248 savepanel;
+#X msg 80 292 write \$1;
+#X obj 80 320 qlist;
+#X obj 342 71 until;
+#X obj 342 42 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 342 137 + 1;
+#X obj 342 165 makefilename cc-%02d-r;
+#X msg 342 230 \; \$1 bang;
+#X obj 340 312 pack f s;
+#X obj 342 201 t s s;
+#X obj 340 281 r cc-nn-s;
+#X msg 340 343 add \$2 \$1;
+#X obj 80 40 r \$0-save-config-s;
+#X obj 80 182 pdcontrol;
+#X msg 80 154 dir;
+#X obj 10 10 cnv 15 30 30 empty empty empty 20 12 0 14 #dcdcdc #404040
+0;
+#X obj 10 10 bng 30 250 50 0 \$0-save-config-s \$0-save-config-r empty
+20 7 0 10 #00fc04 #000000 #000000;
+#X obj 80 216 makefilename %s/../config;
+#X obj 163 289 parse-file-path;
+#X obj 231 319 s config-name;
+#X obj 342 104 upto 29;
+#X connect 0 0 1 0;
+#X connect 1 0 17 0;
+#X connect 1 1 7 0;
+#X connect 1 2 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 3 0 21 0;
+#X connect 4 0 5 0;
+#X connect 6 0 23 0;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 12 0;
+#X connect 11 0 14 0;
+#X connect 12 0 10 0;
+#X connect 12 1 11 1;
+#X connect 13 0 11 0;
+#X connect 14 0 5 0;
+#X connect 15 0 0 0;
+#X connect 16 0 20 0;
+#X connect 17 0 16 0;
+#X connect 20 0 3 0;
+#X connect 21 2 22 0;
+#X connect 23 0 8 0;
+#X connect 23 1 6 1;
+#X coords 0 -1 1 1 30 30 2 10 10;

@@ -1,0 +1,35 @@
+#N canvas 574 67 442 437 12;
+#X obj 162 17 ctlin;
+#X floatatom 194 55 2 0 0 1 CHAN - - 0;
+#X floatatom 178 82 4 0 0 1 CC - - 0;
+#X floatatom 162 115 4 0 0 1 VALUE - - 0;
+#X obj 201 274 ==;
+#X obj 162 339 spigot;
+#X obj 201 301 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X floatatom 280 64 5 0 0 0 - - - 0;
+#X obj 162 152 s \$0-remap-in;
+#X obj 280 28 r \$0-remap-in;
+#X obj 280 96 s \$0-remap-out;
+#X obj 162 177 r \$0-remap-out;
+#X floatatom 219 245 5 0 0 0 - - - 0;
+#X obj 0 0 cnv 15 130 50 empty empty empty 20 12 0 14 #c4fcfc #404040
+0;
+#X obj 7 7 nbx 3 19 0 127 0 1 cc-nn-s cc-29-r Tempo/Duration 0 30 0
+14 #f8fc00 #000000 #000000 127 256;
+#X obj 218 216 r cc-28-r;
+#X obj 162 368 s arp-03-r;
+#X connect 0 0 3 0;
+#X connect 0 1 2 0;
+#X connect 0 2 1 0;
+#X connect 2 0 4 0;
+#X connect 3 0 8 0;
+#X connect 4 0 6 0;
+#X connect 5 0 16 0;
+#X connect 6 0 5 1;
+#X connect 7 0 10 0;
+#X connect 9 0 7 0;
+#X connect 11 0 5 0;
+#X connect 12 0 4 1;
+#X connect 15 0 12 0;
+#X coords 0 -1 1 1 130 50 2 0 0;

@@ -1,0 +1,97 @@
+#N canvas 104 81 732 600 12;
+#X obj 485 51 loadbang;
+#X obj 485 87 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 485 113 s \$0-loadbang;
+#X obj 10 10 cnv 15 420 180 empty empty empty 20 12 0 14 #c4fcfc #404040
+0;
+#X obj 36 47 vradio 20 1 0 6 parm-23-s parm-23-r REVERB\\\ TYPE 0 -12
+0 16 #f8fc00 #000000 #000000 0;
+#X text 58 47 Off;
+#X obj 33 535 pack f f;
+#X obj 33 456 i 0;
+#X obj 86 484 bng 15 250 50 0 empty \$0-loadbang empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 33 238 5 0 0 0 - parm-23-s - 0;
+#X obj 164 59 hsl 100 20 0 127 0 0 parm-24-s parm-24-r REVERB\\\ TIME
+-2 -12 0 16 #f8fc00 #000000 #000000 0 0;
+#X obj 289 59 hsl 100 20 0 127 0 0 parm-25-s parm-25-r REVERB\\\ DEPTH
+-2 -12 0 16 #f8fc00 #000000 #000000 0 0;
+#X obj 382 325 pack f f;
+#X obj 435 273 bng 15 250 50 0 empty \$0-loadbang empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 507 325 pack f f;
+#X obj 560 273 bng 15 250 50 0 empty \$0-loadbang empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 33 274 select 0 1 2 3 4 5;
+#X obj 164 119 hsl 100 20 0 127 0 0 parm-26-s parm-26-r REVERB\\\ MIX
+-2 -12 0 16 #f8fc00 #000000 #000000 0 0;
+#X obj 383 456 pack f f;
+#X obj 436 404 bng 15 250 50 0 empty \$0-loadbang empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 53 431 i 21;
+#X obj 74 407 i 42;
+#X obj 94 383 i 63;
+#X obj 115 359 i 84;
+#X obj 135 335 i 105;
+#X obj 86 508 i 90;
+#X obj 435 298 i 34;
+#X obj 560 298 i 35;
+#X obj 436 429 i 36;
+#X obj 156 305 print REVERB_TYPE invalid;
+#X text 58 68 Hall;
+#X text 58 88 Plate;
+#X text 58 109 Space;
+#X text 58 129 Riser;
+#X text 58 149 Submarine;
+#X floatatom 382 273 5 0 0 0 - parm-24-s - 0;
+#X floatatom 507 273 5 0 0 0 - parm-25-s - 0;
+#X floatatom 383 404 5 0 0 0 - parm-26-s - 0;
+#X obj 622 78 s parm-nn-s;
+#X obj 622 155 s parm-nn-s;
+#X obj 622 235 s parm-nn-s;
+#X obj 622 317 s parm-nn-s;
+#X obj 622 41 r parm-23-s;
+#X obj 622 118 r parm-24-s;
+#X obj 622 198 r parm-25-s;
+#X obj 622 280 r parm-26-s;
+#X obj 33 560 s ctlout;
+#X obj 382 350 s ctlout;
+#X obj 507 350 s ctlout;
+#X obj 383 481 s ctlout;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 6 0 46 0;
+#X connect 7 0 6 0;
+#X connect 8 0 25 0;
+#X connect 9 0 16 0;
+#X connect 12 0 47 0;
+#X connect 13 0 26 0;
+#X connect 14 0 48 0;
+#X connect 15 0 27 0;
+#X connect 16 0 7 0;
+#X connect 16 1 20 0;
+#X connect 16 2 21 0;
+#X connect 16 3 22 0;
+#X connect 16 4 23 0;
+#X connect 16 5 24 0;
+#X connect 16 6 29 0;
+#X connect 18 0 49 0;
+#X connect 19 0 28 0;
+#X connect 20 0 6 0;
+#X connect 21 0 6 0;
+#X connect 22 0 6 0;
+#X connect 23 0 6 0;
+#X connect 24 0 6 0;
+#X connect 25 0 6 1;
+#X connect 26 0 12 1;
+#X connect 27 0 14 1;
+#X connect 28 0 18 1;
+#X connect 35 0 12 0;
+#X connect 36 0 14 0;
+#X connect 37 0 18 0;
+#X connect 42 0 38 0;
+#X connect 43 0 39 0;
+#X connect 44 0 40 0;
+#X connect 45 0 41 0;
+#X coords 0 -1 1 1 420 180 1 10 10;

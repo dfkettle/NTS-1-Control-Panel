@@ -1,0 +1,108 @@
+#N canvas 136 132 746 605 12;
+#X obj 487 48 loadbang;
+#X obj 487 84 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 487 110 s \$0-loadbang;
+#X obj 10 10 cnv 15 420 160 empty empty empty 20 12 0 14 #c4fcfc #404040
+0;
+#X obj 36 43 vradio 20 1 0 5 parm-18-s parm-18-r EG\\\ TYPE 0 -12 0
+16 #f8fc00 #000000 #000000 0;
+#X obj 36 467 pack f f;
+#X obj 36 388 i 0;
+#X obj 57 363 i 25;
+#X obj 79 339 i 50;
+#X obj 101 315 i 75;
+#X obj 89 416 bng 15 250 50 0 empty \$0-loadbang empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 36 231 select 0 1 2 3 4;
+#X floatatom 36 195 5 0 0 0 - parm-18-s - 0;
+#X obj 123 291 i 101;
+#X obj 143 51 hsl 100 20 0 127 0 0 parm-19-s parm-19-r ATTACK -2 -12
+0 16 #f8fc00 #000000 #000000 0 0;
+#X obj 282 51 hsl 100 20 0 127 0 0 parm-20-s parm-20-r RELEASE -2 -12
+0 16 #f8fc00 #000000 #000000 0 0;
+#X obj 328 283 pack f f;
+#X obj 381 232 bng 15 250 50 0 empty \$0-loadbang empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 440 283 pack f f;
+#X obj 493 232 bng 15 250 50 0 empty \$0-loadbang empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 89 440 i 14;
+#X obj 381 256 i 16;
+#X obj 493 256 i 19;
+#X text 58 43 ADSR;
+#X text 58 64 AHR;
+#X text 58 84 AR;
+#X text 58 105 AR Loop;
+#X text 58 125 Open;
+#X obj 145 262 print EG_TYPE invalid;
+#X obj 143 107 hsl 100 20 0 127 0 0 parm-21-s parm-21-r TREMOLO\\\ RATE
+-2 -12 0 16 #f8fc00 #000000 #000000 0 0;
+#X obj 282 107 hsl 100 20 0 127 0 0 parm-22-s parm-22-r TREMOLO\\\ DEPTH
+-2 -12 0 16 #f8fc00 #000000 #000000 0 0;
+#X obj 329 404 pack f f;
+#X obj 382 353 bng 15 250 50 0 empty \$0-loadbang empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 445 404 pack f f;
+#X obj 498 353 bng 15 250 50 0 empty \$0-loadbang empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 382 377 i 21;
+#X obj 498 377 i 20;
+#X floatatom 328 232 5 0 0 0 - parm-19-s - 0;
+#X floatatom 440 232 5 0 0 0 - parm-20-s - 0;
+#X floatatom 329 353 5 0 0 0 - parm-21-s - 0;
+#X floatatom 445 353 5 0 0 0 - parm-22-s - 0;
+#X obj 627 67 s parm-nn-s;
+#X obj 627 144 s parm-nn-s;
+#X obj 627 224 s parm-nn-s;
+#X obj 627 306 s parm-nn-s;
+#X obj 627 386 s parm-nn-s;
+#X obj 627 30 r parm-18-s;
+#X obj 627 107 r parm-19-s;
+#X obj 627 187 r parm-20-s;
+#X obj 627 269 r parm-21-s;
+#X obj 627 349 r parm-22-s;
+#X obj 36 492 s ctlout;
+#X obj 329 429 s ctlout;
+#X obj 445 429 s ctlout;
+#X obj 440 308 s ctlout;
+#X obj 328 308 s ctlout;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 5 0 51 0;
+#X connect 6 0 5 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 0;
+#X connect 9 0 5 0;
+#X connect 10 0 20 0;
+#X connect 11 0 6 0;
+#X connect 11 1 7 0;
+#X connect 11 2 8 0;
+#X connect 11 3 9 0;
+#X connect 11 4 13 0;
+#X connect 11 5 28 0;
+#X connect 12 0 11 0;
+#X connect 13 0 5 0;
+#X connect 16 0 55 0;
+#X connect 17 0 21 0;
+#X connect 18 0 54 0;
+#X connect 19 0 22 0;
+#X connect 20 0 5 1;
+#X connect 21 0 16 1;
+#X connect 22 0 18 1;
+#X connect 31 0 52 0;
+#X connect 32 0 35 0;
+#X connect 33 0 53 0;
+#X connect 34 0 36 0;
+#X connect 35 0 31 1;
+#X connect 36 0 33 1;
+#X connect 37 0 16 0;
+#X connect 38 0 18 0;
+#X connect 39 0 31 0;
+#X connect 40 0 33 0;
+#X connect 46 0 41 0;
+#X connect 47 0 42 0;
+#X connect 48 0 43 0;
+#X connect 49 0 44 0;
+#X connect 50 0 45 0;
+#X coords 0 -1 1 1 420 160 1 10 10;

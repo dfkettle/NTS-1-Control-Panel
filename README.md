@@ -11,3 +11,9 @@ Dependencies:
 1. Pd v0.51.3 or later
 2. iemlib v1.22 or later
 
+Changes (v1.0):
+
+1. Fixed some bugs
+2. Added limited support for arpeggiator
+3. Added 30 presets (patches)
+4. Added control to monitor audio levels

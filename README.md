@@ -9,5 +9,5 @@ You can also create and save presets for patches to run on the NTS-1.
 Dependencies:
 
 1. Pd v0.51.3 or later
-2. ggee v0.82 or later
+2. iemlib v1.22 or later
 

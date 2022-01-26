@@ -17,3 +17,4 @@ Changes (v1.0):
 2. Added limited support for arpeggiator
 3. Added 30 presets (patches)
 4. Added control to monitor audio levels
+5. Added randomize function to generate presets

@@ -270,73 +270,50 @@
 17 7 0 10 #00fc04 #000000 #000000;
 #X obj 89 15 r \$0-open-setup-s;
 #X msg 89 81 \; pd-midi vis \$1;
-#N canvas 92 122 1004 491 midi 0;
-#X obj 0 0 cnv 15 1000 480 empty empty empty 20 12 0 14 #c4fcfc #404040
+#N canvas 54 180 816 513 midi 0;
+#X obj 0 0 cnv 15 800 500 empty empty empty 20 12 0 14 #c4fcfc #404040
 0;
-#X obj 24 50 unpack f f;
-#X floatatom 91 80 3 0 127 1 CC - - 0;
-#X floatatom 24 106 4 0 127 1 VAL - - 0;
-#X obj 24 144 ctlout;
-#X obj 150 58 i 1;
-#X obj 150 22 bng 15 250 50 0 empty \$0-loadbang empty 17 7 0 10 #fc0400
-#000000 #000000;
-#X obj 233 22 notein;
-#X obj 233 144 noteout;
-#X floatatom 252 49 3 0 0 1 VEL - - 0;
-#X floatatom 233 73 3 0 0 1 NOTE - - 0;
-#X obj 523 22 ctlin;
-#X floatatom 555 52 2 0 0 1 CHAN - - 0;
-#X floatatom 539 77 4 0 0 1 CC - - 0;
-#X floatatom 523 102 4 0 0 1 VALUE - - 0;
-#X obj 319 49 tgl 15 0 empty \$0-loadbang empty 17 7 0 10 #00fc04 #000000
-#000000 0 1;
-#X obj 233 102 spigot;
-#X obj 12 216 lib/remap-mod-type;
-#X obj 12 265 lib/remap-mod-time;
-#X obj 12 314 lib/remap-mod-depth;
-#X obj 103 265 lib/remap-osc-shape;
-#X obj 103 314 lib/remap-osc-alt;
-#X obj 103 363 lib/remap-lfo-rate;
-#X obj 103 412 lib/remap-lfo-depth;
-#X obj 199 265 lib/remap-cutoff;
-#X obj 199 314 lib/remap-resonance;
-#X obj 199 363 lib/remap-sweep-depth;
-#X obj 199 412 lib/remap-sweep-rate;
-#X obj 308 265 lib/remap-delay-time;
-#X obj 308 314 lib/remap-delay-depth;
-#X obj 308 363 lib/remap-delay-mix;
-#X obj 417 265 lib/remap-attack;
-#X obj 417 314 lib/remap-release;
-#X obj 417 363 lib/remap-tremolo-rate;
-#X obj 417 412 lib/remap-tremolo-depth;
-#X obj 532 265 lib/remap-reverb-time;
-#X obj 532 314 lib/remap-reverb-depth;
-#X obj 532 363 lib/remap-reverb-mix;
-#X obj 103 216 lib/remap-osc-type;
-#X obj 198 216 lib/remap-filter-type;
-#X obj 309 216 lib/remap-delay-type;
-#X obj 418 216 lib/remap-eg-type;
-#X obj 533 216 lib/remap-reverb-type;
-#X text 21 186 Enter incoming CC values sent by your controller below:
+#X obj 585 67 ctlin;
+#X floatatom 617 97 2 0 0 1 CHAN - - 0;
+#X floatatom 601 122 4 0 0 1 CC - - 0;
+#X floatatom 585 147 4 0 0 1 VALUE - - 0;
+#X obj 10 232 lib/remap-mod-type;
+#X obj 10 281 lib/remap-mod-time;
+#X obj 10 330 lib/remap-mod-depth;
+#X obj 103 281 lib/remap-osc-shape;
+#X obj 104 330 lib/remap-osc-alt;
+#X obj 103 379 lib/remap-lfo-rate;
+#X obj 103 428 lib/remap-lfo-depth;
+#X obj 197 281 lib/remap-cutoff;
+#X obj 197 330 lib/remap-resonance;
+#X obj 197 379 lib/remap-sweep-depth;
+#X obj 197 428 lib/remap-sweep-rate;
+#X obj 306 281 lib/remap-delay-time;
+#X obj 306 330 lib/remap-delay-depth;
+#X obj 306 379 lib/remap-delay-mix;
+#X obj 415 281 lib/remap-attack;
+#X obj 415 330 lib/remap-release;
+#X obj 415 379 lib/remap-tremolo-rate;
+#X obj 415 428 lib/remap-tremolo-depth;
+#X obj 530 281 lib/remap-reverb-time;
+#X obj 530 330 lib/remap-reverb-depth;
+#X obj 530 379 lib/remap-reverb-mix;
+#X obj 103 232 lib/remap-osc-type;
+#X obj 196 232 lib/remap-filter-type;
+#X obj 307 232 lib/remap-delay-type;
+#X obj 416 232 lib/remap-eg-type;
+#X obj 531 232 lib/remap-reverb-type;
+#X text 19 202 Enter incoming CC values sent by your controller below:
 ;
-#X text 841 230 Load Config;
-#X text 841 271 Save Config;
-#X text 841 311 Reset Config;
-#X obj 803 226 lib/load-config;
-#X obj 803 265 lib/save-config;
-#X obj 803 304 lib/reset-config;
-#X text 344 47 <== MIDI note pass-thru;
-#X obj 372 89 loadbang;
-#X obj 372 123 s \$0-loadbang;
-#X obj 150 98 nbx 2 14 1 16 0 0 empty empty CHAN 34 8 0 12 #f8fc00
-#000000 #000000 0 256;
-#X text 592 75 <== Move knob/slider on MIDI controller to detect CC
-;
-#X obj 24 22 r ctlout;
-#X obj 649 217 lib/remap-arp-pattern;
-#X obj 649 265 lib/remap-arp-length;
-#X obj 649 314 lib/remap-arp-duration;
-#X obj 24 80 int;
+#X text 288 24 Load Config;
+#X text 288 65 Save Config;
+#X text 288 105 Reset Config;
+#X obj 250 20 lib/load-config;
+#X obj 250 59 lib/save-config;
+#X obj 250 98 lib/reset-config;
+#X obj 647 232 lib/remap-arp-pattern;
+#X obj 647 281 lib/remap-arp-length;
+#X obj 647 330 lib/remap-arp-duration;
 #N canvas 45 438 450 300 config-name 0;
 #X msg 19 82 label \$1;
 #X obj 122 53 loadbang;
@@ -351,27 +328,76 @@
 #X connect 2 0 4 0;
 #X connect 3 0 0 0;
 #X coords 0 -1 1 1 200 30 2 10 10;
-#X restore 758 384 pd config-name;
-#X connect 1 0 59 0;
-#X connect 1 1 2 0;
-#X connect 2 0 4 1;
-#X connect 3 0 4 0;
-#X connect 5 0 53 0;
-#X connect 6 0 5 0;
-#X connect 7 0 10 0;
-#X connect 7 1 9 0;
-#X connect 9 0 8 1;
-#X connect 10 0 16 0;
-#X connect 11 0 14 0;
-#X connect 11 1 13 0;
-#X connect 11 2 12 0;
-#X connect 15 0 16 1;
-#X connect 16 0 8 0;
-#X connect 51 0 52 0;
-#X connect 53 0 4 2;
-#X connect 53 0 8 2;
-#X connect 55 0 1 0;
-#X connect 59 0 3 0;
+#X restore 177 146 pd config-name;
+#X obj 25 61 nbx 3 19 0 16 0 0 \$0-channel-s \$0-channel-r empty 0
+-8 0 10 #faff00 #000000 #000000 0 256;
+#X text 72 56 MIDI Channel;
+#X text 72 71 (Enter 0 for Omni);
+#X text 577 17 Move knob/slider on MIDI;
+#X text 577 36 controller to detect:;
+#X obj 25 17 tgl 25 0 \$0-passthru \$0-loadbang empty 17 7 0 10 #00ff04
+#000000 #000000 0 1;
+#X text 56 21 <== MIDI note pass-thru;
+#N canvas 515 347 755 232 route 0;
+#X obj 24 38 unpack f f;
+#X floatatom 91 68 3 0 16 1 CC - - 0;
+#X floatatom 24 94 4 0 127 1 VAL - - 0;
+#X obj 24 167 ctlout;
+#X obj 204 10 notein;
+#X obj 204 173 noteout;
+#X floatatom 223 37 3 0 0 1 VEL - - 0;
+#X floatatom 204 61 3 0 0 1 NOTE - - 0;
+#X obj 243 82 tgl 15 0 empty \$0-passthru empty 17 7 0 10 #c6feff #000000
+#000000 0 1;
+#X obj 204 102 spigot;
+#X obj 600 18 loadbang;
+#X obj 600 52 s \$0-loadbang;
+#X obj 24 10 r ctlout;
+#X obj 24 68 int;
+#X obj 144 24 nbx 2 19 0 16 0 0 empty \$0-channel-s CHAN 0 -8 0 12
+#c6feff #000000 #000000 0 256;
+#X obj 144 50 - 1;
+#X obj 144 73 nbx 2 19 0 15 0 0 empty empty empty 0 -8 0 12 #c6feff
+#000000 #000000 0 256;
+#X obj 284 74 expr if(($f1==$f2)||($f2==0) \, 1 \, 0);
+#X obj 204 149 spigot;
+#X obj 284 100 tgl 15 0 empty empty empty 17 7 0 10 #c6feff #000000
+#000000 0 1;
+#X obj 526 47 nbx 2 19 0 16 0 0 empty \$0-channel-s CHAN 0 -8 0 12
+#c6feff #000000 #000000 0 256;
+#X obj 284 47 nbx 2 19 0 15 0 0 empty empty empty 0 -8 0 12 #c6feff
+#000000 #000000 0 256;
+#X obj 620 113 s \$0-channel-r;
+#X obj 620 84 int 0;
+#X connect 0 0 13 0;
+#X connect 0 1 1 0;
+#X connect 1 0 3 1;
+#X connect 2 0 3 0;
+#X connect 4 0 7 0;
+#X connect 4 1 6 0;
+#X connect 4 2 5 2;
+#X connect 4 2 21 0;
+#X connect 6 0 5 1;
+#X connect 7 0 9 0;
+#X connect 8 0 9 1;
+#X connect 9 0 18 0;
+#X connect 10 0 11 0;
+#X connect 10 0 23 0;
+#X connect 12 0 0 0;
+#X connect 13 0 2 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 3 2;
+#X connect 17 0 19 0;
+#X connect 18 0 5 0;
+#X connect 19 0 18 1;
+#X connect 20 0 17 1;
+#X connect 21 0 17 0;
+#X connect 23 0 22 0;
+#X restore 23 115 pd route;
+#X connect 1 0 4 0;
+#X connect 1 1 3 0;
+#X connect 1 2 2 0;
 #X restore 6 63 pd midi;
 #X msg 228 81 \; pd-midi vis 0;
 #X obj 228 15 loadbang;
@@ -384,7 +410,7 @@
 #X text 863 96 MIDI Setup;
 #N canvas 114 159 488 144 about 0;
 #X obj 302 15 loadbang;
-#N canvas 110 400 495 293 show-about 1;
+#N canvas 110 400 495 293 show-about 0;
 #X obj 1 0 cnv 15 480 300 empty empty empty 20 12 0 14 #c4fcfc #404040
 0;
 #X text 13 46 Created by David Kettle;
@@ -395,10 +421,10 @@
 #X text 14 98 https://www.korg.com/us/support/download/product/0/832/
 ;
 #X text 105 236 https://github.com/dfkettle/NTS-1-Control-Panel;
-#X text 15 14 Korg NTS-1 Control Panel v1.0;
 #X text 15 193 2 iemlib v1.22 or later;
 #X text 13 130 Tested with NTS-1 firmware v1.02 under Windows 7 \,
 8.1 & 10;
+#X text 15 14 Korg NTS-1 Control Panel v1.1;
 #X restore 10 71 pd show-about;
 #X obj 130 15 r \$0-show-about-s;
 #X msg 302 76 \; pd-show-about vis 0;

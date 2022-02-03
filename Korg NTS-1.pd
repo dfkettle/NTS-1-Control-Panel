@@ -411,9 +411,9 @@
 #X coords 0 -1 1 1 30 30 2 10 10;
 #X restore 826 87 pd setup;
 #X text 863 96 MIDI Setup;
-#N canvas 114 159 488 144 about 1;
+#N canvas 114 159 488 144 about 0;
 #X obj 302 15 loadbang;
-#N canvas 110 400 495 293 show-about 1;
+#N canvas 110 400 495 293 show-about 0;
 #X obj 1 0 cnv 15 480 300 empty empty empty 20 12 0 14 #c4fcfc #404040
 0;
 #X text 13 46 Created by David Kettle;

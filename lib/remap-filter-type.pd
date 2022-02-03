@@ -42,17 +42,18 @@
 #X floatatom 218 252 5 0 0 0 - - - 0;
 #X obj 0 0 cnv 15 100 50 empty empty empty 20 12 0 14 #c4fcfc #404040
 0;
-#X obj 7 7 nbx 3 19 0 127 0 1 cc-nn-s cc-09-r Filter\ Type 0 30 0 14
-#f8fc00 #000000 #000000 56 256;
-#X obj 218 223 r cc-09-r;
+#X obj 7 7 nbx 3 19 0 127 0 1 cc-09-s cc-09-r Filter\ Type 0 30 0 14
+#f8fc00 #000000 #000000 0 256;
 #X obj 161 381 s parm-09-r;
+#X obj 218 223 r cc-09-s;
+#X obj 232 280 s cc-nn-s;
 #X connect 0 0 3 0;
 #X connect 0 1 2 0;
 #X connect 0 2 1 0;
 #X connect 2 0 4 0;
 #X connect 3 0 16 0;
 #X connect 4 0 6 0;
-#X connect 5 0 36 0;
+#X connect 5 0 35 0;
 #X connect 6 0 5 1;
 #X connect 7 0 15 0;
 #X connect 8 0 7 0;
@@ -84,5 +85,6 @@
 #X connect 31 0 21 0;
 #X connect 31 1 22 0;
 #X connect 32 0 4 1;
-#X connect 35 0 32 0;
+#X connect 32 0 37 0;
+#X connect 36 0 32 0;
 #X coords 0 -1 1 1 100 50 2 0 0;

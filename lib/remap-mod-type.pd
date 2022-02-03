@@ -1,50 +1,51 @@
-#N canvas 515 148 618 430 12;
-#X obj 185 17 ctlin;
-#X floatatom 217 55 2 0 0 1 CHAN - - 0;
-#X floatatom 201 82 4 0 0 1 CC - - 0;
-#X floatatom 185 115 4 0 0 1 VALUE - - 0;
-#X obj 224 274 ==;
-#X obj 185 339 spigot;
-#X obj 224 301 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#N canvas 36 95 588 430 12;
+#X obj 132 17 ctlin;
+#X floatatom 164 55 2 0 0 1 CHAN - - 0;
+#X floatatom 148 82 4 0 0 1 CC - - 0;
+#X floatatom 132 115 4 0 0 1 VALUE - - 0;
+#X obj 171 274 ==;
+#X obj 132 339 spigot;
+#X obj 171 301 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 330 111 int 0;
-#X obj 330 91 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 300 111 int 0;
+#X obj 300 91 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 383 115 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 353 115 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 436 138 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 406 138 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 489 164 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 459 164 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 383 135 int 1;
-#X obj 436 158 int 2;
-#X obj 489 184 int 3;
-#X floatatom 330 311 5 0 0 0 - - - 0;
-#X obj 185 152 s \$0-remap-in;
-#X obj 330 28 r \$0-remap-in;
-#X obj 330 343 s \$0-remap-out;
-#X obj 185 177 r \$0-remap-out;
-#X floatatom 242 245 5 0 0 0 - - - 0;
+#X obj 353 135 int 1;
+#X obj 406 158 int 2;
+#X obj 459 184 int 3;
+#X floatatom 300 311 5 0 0 0 - - - 0;
+#X obj 132 152 s \$0-remap-in;
+#X obj 300 28 r \$0-remap-in;
+#X obj 300 343 s \$0-remap-out;
+#X obj 132 177 r \$0-remap-out;
+#X floatatom 189 245 5 0 0 0 - - - 0;
 #X obj 0 0 cnv 15 100 50 empty empty empty 20 12 0 14 #c4fcfc #404040
 0;
-#X obj 7 7 nbx 3 19 0 127 0 1 cc-nn-s cc-01-r Mod\ Type 0 30 0 14 #f8fc00
-#000000 #000000 127 256;
-#X obj 185 368 s arp-01-r;
-#X obj 549 164 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 7 7 nbx 3 19 0 127 0 1 cc-01-s cc-01-r Mod\ Type 0 30 0 14 #f8fc00
+#000000 #000000 27 256;
+#X obj 519 164 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 549 184 int 4;
-#X obj 242 216 r cc-01-r;
-#X obj 330 59 moses 25;
-#X obj 383 85 moses 50;
-#X obj 436 111 moses 75;
-#X obj 489 137 moses 101;
+#X obj 519 184 int 4;
+#X obj 300 59 moses 25;
+#X obj 353 85 moses 50;
+#X obj 406 111 moses 75;
+#X obj 459 137 moses 101;
+#X obj 132 368 s parm-01-r;
+#X obj 189 216 r cc-01-s;
+#X obj 205 274 s cc-nn-s;
 #X connect 0 0 3 0;
 #X connect 0 1 2 0;
 #X connect 0 2 1 0;
 #X connect 2 0 4 0;
 #X connect 3 0 16 0;
 #X connect 4 0 6 0;
-#X connect 5 0 23 0;
+#X connect 5 0 29 0;
 #X connect 6 0 5 1;
 #X connect 7 0 15 0;
 #X connect 8 0 7 0;
@@ -55,18 +56,19 @@
 #X connect 13 0 15 0;
 #X connect 14 0 15 0;
 #X connect 15 0 18 0;
-#X connect 17 0 27 0;
+#X connect 17 0 25 0;
 #X connect 19 0 5 0;
 #X connect 20 0 4 1;
-#X connect 24 0 25 0;
-#X connect 25 0 15 0;
-#X connect 26 0 20 0;
-#X connect 27 0 8 0;
+#X connect 20 0 31 0;
+#X connect 23 0 24 0;
+#X connect 24 0 15 0;
+#X connect 25 0 8 0;
+#X connect 25 1 26 0;
+#X connect 26 0 9 0;
+#X connect 26 1 27 0;
+#X connect 27 0 10 0;
 #X connect 27 1 28 0;
-#X connect 28 0 9 0;
-#X connect 28 1 29 0;
-#X connect 29 0 10 0;
-#X connect 29 1 30 0;
-#X connect 30 0 11 0;
-#X connect 30 1 24 0;
+#X connect 28 0 11 0;
+#X connect 28 1 23 0;
+#X connect 30 0 20 0;
 #X coords 0 -1 1 1 100 50 2 0 0;

@@ -1,7 +1,7 @@
 #N canvas 286 131 1004 613 12;
 #X obj 0 0 cnv 15 1000 600 empty empty empty 20 12 0 14 #c4fcfc #404040
 0;
-#N canvas 95 240 473 430 load-patch 0;
+#N canvas 872 213 473 430 load-patch 0;
 #X obj 164 57 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
 #X obj 164 184 openpanel;
@@ -270,7 +270,7 @@
 17 7 0 10 #00fc04 #000000 #000000;
 #X obj 89 15 r \$0-open-setup-s;
 #X msg 89 81 \; pd-midi vis \$1;
-#N canvas 54 180 816 513 midi 0;
+#N canvas 547 172 816 513 midi 0;
 #X obj 0 0 cnv 15 800 500 empty empty empty 20 12 0 14 #c4fcfc #404040
 0;
 #X obj 585 67 ctlin;
@@ -280,7 +280,7 @@
 #X obj 10 232 lib/remap-mod-type;
 #X obj 10 281 lib/remap-mod-time;
 #X obj 10 330 lib/remap-mod-depth;
-#X obj 103 281 lib/remap-osc-shape;
+#X obj 104 281 lib/remap-osc-shape;
 #X obj 104 330 lib/remap-osc-alt;
 #X obj 103 379 lib/remap-lfo-rate;
 #X obj 103 428 lib/remap-lfo-depth;
@@ -338,7 +338,7 @@
 #X obj 25 17 tgl 25 0 \$0-passthru \$0-loadbang empty 17 7 0 10 #00ff04
 #000000 #000000 0 1;
 #X text 56 21 <== MIDI note pass-thru;
-#N canvas 515 347 755 232 route 0;
+#N canvas 580 520 755 232 route 0;
 #X obj 24 38 unpack f f;
 #X floatatom 91 68 3 0 16 1 CC - - 0;
 #X floatatom 24 94 4 0 127 1 VAL - - 0;
@@ -369,10 +369,13 @@
 #000000 #000000 0 256;
 #X obj 620 113 s \$0-channel-r;
 #X obj 620 84 int 0;
+#X obj 35 126 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
 #X connect 0 0 13 0;
 #X connect 0 1 1 0;
 #X connect 1 0 3 1;
 #X connect 2 0 3 0;
+#X connect 2 0 24 0;
 #X connect 4 0 7 0;
 #X connect 4 1 6 0;
 #X connect 4 2 5 2;
@@ -408,9 +411,9 @@
 #X coords 0 -1 1 1 30 30 2 10 10;
 #X restore 826 87 pd setup;
 #X text 863 96 MIDI Setup;
-#N canvas 114 159 488 144 about 0;
+#N canvas 114 159 488 144 about 1;
 #X obj 302 15 loadbang;
-#N canvas 110 400 495 293 show-about 0;
+#N canvas 110 400 495 293 show-about 1;
 #X obj 1 0 cnv 15 480 300 empty empty empty 20 12 0 14 #c4fcfc #404040
 0;
 #X text 13 46 Created by David Kettle;
@@ -424,7 +427,7 @@
 #X text 15 193 2 iemlib v1.22 or later;
 #X text 13 130 Tested with NTS-1 firmware v1.02 under Windows 7 \,
 8.1 & 10;
-#X text 15 14 Korg NTS-1 Control Panel v1.1;
+#X text 15 14 Korg NTS-1 Control Panel v1.2;
 #X restore 10 71 pd show-about;
 #X obj 130 15 r \$0-show-about-s;
 #X msg 302 76 \; pd-show-about vis 0;

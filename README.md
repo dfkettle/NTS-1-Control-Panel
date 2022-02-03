@@ -11,6 +11,10 @@ Dependencies:
 1. Pd v0.51.3 or later
 2. iemlib v1.22 or later
 
+Changes (v1.2):
+
+1. Bug fix 
+
 Changes (v1.1):
 
 1. Added capability to specify MIDI channel (1-16, or 0 for Omni mode)
